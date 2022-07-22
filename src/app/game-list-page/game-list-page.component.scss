@@ -1,0 +1,14 @@
+.main-container{
+  padding-left: 4rem;
+  padding-right: 4rem;
+  max-height: var(--content-height);
+  overflow: auto;
+}
+
+.upper-field{
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}

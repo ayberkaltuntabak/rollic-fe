@@ -1,0 +1,23 @@
+<div class="game-container">
+  <div class="image-area">
+    <img class="game-image" [src]="this.config.image" alt="">
+  </div>
+  <div class="details-area mt-2 p-2 d-flex flex-column w-100">
+    <ng-container *ngFor="let item of this.infoAreaConfig">
+      <div class="info-area w-100 d-flex align-items-center">
+        <span class="label">
+          {{item.label}}:
+        </span>
+        <span class="value">
+          {{this.getValue(item)}}
+        </span>
+      </div>
+    </ng-container>
+  </div>
+  <div class="button-area align-items-center mt-2 justify-content-end w-100 d-flex px-2 pb-2">
+    <div class="button-area pl-3">
+
+      <rollic-button [config]="this.deleteButton"></rollic-button>
+    </div>
+  </div>
+</div>

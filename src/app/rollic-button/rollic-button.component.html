@@ -1,0 +1,13 @@
+<ng-container *ngIf="this.config">
+  <button class="rollic-button" (click)="this.onClick()" [ngClass]="this.config.styleClass" [attr.disabled]="this.config.disabled == true ? true :null">
+    <ng-container *ngIf="this.config.withIcon">
+      <div class="rollic-button-icon-area">
+        <span [ngClass]="this.config.icon"></span>
+      </div>
+    </ng-container>
+    <span class="text-area">
+      {{this.config.buttonText}}
+    </span>
+  </button>
+
+</ng-container>

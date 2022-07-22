@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "rollic-fe-task"
+    }
+  },
+  "defaultProject": "rollic-fe-task",
+  "cli": {
+    "analytics": "c56c44dd-27d3-4789-8536-91b60e51ca01"
+  }
 }

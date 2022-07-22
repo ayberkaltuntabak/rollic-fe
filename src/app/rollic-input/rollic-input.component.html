@@ -1,0 +1,31 @@
+<!-- <p>rollic-input works!</p> -->
+
+<ng-container  *ngIf="this.config">
+  <ng-container *ngIf="this.formGroup">
+    <div class="input-container d-inline-flex flex-row position-relative" [formGroup]="this.formGroup">
+      <ng-container *ngIf="this.config.withIcon">
+        <div class="rollic-icon-area">
+          <span [ngClass]="this.config.icon"></span>
+        </div>
+      </ng-container>
+      <input #inputElement class="rollic-input"   [ngClass]="this.clazzName" [type]="this.config.type" [placeholder]="this.config.placeholder" [formControlName]="this.config.formConfig.key" [accept]="this.config.type == 'file' ? 'image/x-png,image/gif,image/jpeg':''">
+
+    </div>
+    <ng-container *ngIf="this.errors">
+      <span class="error-text" *ngFor="let item of this.errors">
+        {{item}}
+      </span>
+    </ng-container>
+  </ng-container>
+  <ng-container *ngIf="this.formGroup === undefined">
+    <div class="input-container d-inline-flex flex-row position-relative" >
+      <ng-container *ngIf="this.config.withIcon">
+        <div class="rollic-icon-area">
+          <span [ngClass]="this.config.icon"></span>
+        </div>
+      </ng-container>
+      <input class="rollic-input" [ngClass]="this.config.styleClass" [type]="this.config.type" [placeholder]="this.config.placeholder" >
+
+    </div>
+  </ng-container>
+</ng-container>

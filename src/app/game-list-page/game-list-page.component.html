@@ -1,0 +1,19 @@
+<div class="main-container w-100 h-100 d-flex flex-column">
+  <div class="upper-field w-100">
+    <div class="search-input-area">
+      <rollic-input [config]="this.searchInputConfig"></rollic-input>
+    </div>
+    <div class="add-button">
+      <rollic-button [config]="this.routeButtonConfig"></rollic-button>
+    </div>
+  </div>
+  <hr class="rollic-divider mt-4">
+  <div class="content-container w-100 h-100 d-flex flex-row" *ngIf="this.filtered && this.filtered.length > 0">
+    <ng-container *ngFor="let item of this.filtered">
+      <app-game [config]="item"></app-game>
+    </ng-container>
+  </div>
+  <div class=" content-container align-items-center justify-content-center w-100 h-100 d-flex flex-column" *ngIf="!(this.filtered && this.filtered.length > 0)">
+    <span class="alert-text">There is no Game...</span>
+  </div>
+</div>

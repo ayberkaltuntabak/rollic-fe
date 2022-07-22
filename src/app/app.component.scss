@@ -1,0 +1,33 @@
+
+.splash {
+  justify-content: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  place-items: center;
+  // background: #f5f1dc;
+  background: white;
+  .logo {
+      width: 100%;
+      place-content: center;
+      text-align: center;
+  }
+  .loading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 47px;
+      width: 100%;
+  }
+}
+
+.body-content {
+  top: 60px !important;
+  position: relative;
+  background: #f0f3f5;
+  min-height: calc(100vh - 60px);
+  }
+.toast{position: fixed;
+  top: 30px;
+  z-index: 1231312;
+  right: 10px;}

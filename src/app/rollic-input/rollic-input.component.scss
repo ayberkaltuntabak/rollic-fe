@@ -1,0 +1,8 @@
+:host{
+  display: flex;
+  flex-direction: column;
+}
+.error-text{
+  font-size: 0.6rem;
+  color: var(--color-danger);
+}

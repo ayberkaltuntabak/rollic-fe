@@ -1,1 +1,191 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --color-app-header:#fafbfc;
+  --color-app-header-logo:#fafbfc1a;
+  --color-color-secondary:#1F92EE;
+  --color-color-secondary-dark:#1F92EE;
+  --color-color-secondary-button:#1F92EE;
+  --color-theme-button-color:#1F92EE;
+  --color-color-gray-tone:#6c757d;
+  --color-color-sidebar:#fff;
+  --color-color-blue:#3f6ad8;
+  // Primary
+  --color-primary: #0088c5;
+  --color-primary-rgb: 0,136,197;
+  --color-primary-contrast: #ffffff;
+  --color-primary-contrast-rgb: 255,255,255;
+  --color-primary-shade: #0078ad;
+  --color-primary-tint: #1a94cb;
+
+  // Secondary
+  --color-secondary: #4c4d4f;
+  --color-secondary-rgb: 76,77,79;
+  --color-secondary-contrast: #ffffff;
+  --color-secondary-contrast-rgb: 255,255,255;
+  --color-secondary-shade: #434446;
+  --color-secondary-tint: #5e5f61;
+
+  // Dark
+  --color-dark: #222222;
+  --color-dark-rgb: 34,34,34;
+  --color-dark-contrast: #ffffff;
+  --color-dark-contrast-rgb: 255,255,255;
+  --color-dark-shade: #1e1e1e;
+  --color-dark-tint: #383838;
+
+  // Light
+  --color-light: #f5f5f5;
+  --color-light-rgb: 245,245,245;
+  --color-light-contrast: #000000;
+  --color-light-contrast-rgb: 0,0,0;
+  --color-light-shade: #d8d8d8;
+  --color-light-tint: #f6f6f6;
+
+  // Success
+  --color-success: #006400;
+  --color-success-rgb: 0,100,0;
+  --color-success-contrast: #ffffff;
+  --color-success-contrast-rgb: 255,255,255;
+  --color-success-shade: #005800;
+  --color-success-tint: #1a741a;
+
+  // Danger
+  --color-danger: #8b0000;
+  --color-danger-rgb: 139,0,0;
+  --color-danger-contrast: #ffffff;
+  --color-danger-contrast-rgb: 255,255,255;
+  --color-danger-shade: #7a0000;
+  --color-danger-tint: #971a1a;
+
+  //white
+  --color-white: #ffffff;
+  --color-white-rgb: 255,255,255;
+  --color-white-contrast: #000000;
+  --color-white-contrast-rgb: 0,0,0;
+  --color-white-shade: #e0e0e0;
+  --color-white-tint: #ffffff;
+
+  --color-main-background: rgb(248,248,248);
+  --color-main-white: rgb(255,255,255);
+  --color-main-theme: #1F92EE;
+  --content-height : calc(100vh - 60px);
+}
+body {
+  font-family: 'Work Sans', sans-serif;
+  background: #f0f3f5;
+  height: 100%;
+}
+body {
+  font-family: 'Work Sans', sans-serif;
+  background: #f0f3f5;
+  height: 100%;
+}
+
+ h1, h2, h3, h4, h5, h6 {
+  font-family: 'Crimson Text', serif;
+ }
+
+ html{
+   height: 100%;margin: 0;
+   padding: 0;
+   border: 0;
+   vertical-align: baseline;
+   -webkit-text-size-adjust: 100%;
+
+ }
+
+span{
+  color: #343a40;
+}
+.rollic-input {
+  background-color: #fff;
+  text-align: left;
+  border: 1px solid var(--color-color-gray-tone);
+  padding: 0.3rem 0.5rem;
+  min-width: 300px;
+  outline: none;
+  border-radius: 0.2rem;
+  box-shadow: none;
+  flex: 1 0 auto;
+  &:focus{
+    border: 1px solid var(--color-main-theme);
+  }
+  &.with-icon{
+    padding-left: calc(1.5rem + 0.3rem);
+  }
+  &.small{
+    min-width: 200px;
+  }
+  &.large{
+    min-width: 40rem;
+  }
+  &.rollic-rounded{
+    border-radius: 0.4rem;
+  }
+  &.error{
+    border: 1px solid var(--color-danger);
+    outline: none !important;
+  }
+  &.file-upload{
+    background-color: transparent;
+    border: 0px solid transparent;
+    padding-left: 0rem !important;
+  }
+}
+.rollic-icon-area{
+  cursor: default;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  left: 0;
+  margin: 0;
+  height: 100%;
+  min-height: 1.5rem;
+  max-width: 1.5rem;
+  width: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+}
+.rollic-button{
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0.5rem 0.7rem;
+  border-radius: 0.3rem;
+  color: #fff !important;
+  background-color: var(--color-main-theme);
+  border: 0px solid black;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-size: 0.8rem;
+  opacity: 1;
+  transition: opacity 0.5s;
+  &.button-sm{
+    padding: 0.2rem 0.5rem ;
+  }
+  &.rollic-rounded{
+    border-radius: 2.6rem !important;
+  }
+  &:active{
+    opacity: 0.7!important;
+  }
+}
+.success{
+  color: #fff;
+  background-color: #5ec25e;
+}
+button:disabled{
+  opacity: 0.5;
+  pointer-events: none;
+  user-select: none;
+}
+.danger{
+  background-color: var(--color-danger);
+  color: #fff;
+}

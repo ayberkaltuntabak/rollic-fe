@@ -1,0 +1,11 @@
+<div class="page-container d-flex flex-column w-100  align-items-center">
+  <div class="form-area d-flex flex-column" [formGroup]="gameCreationForm">
+    <ng-container *ngFor="let item of this.inputFields">
+      <rollic-input [config]="item"></rollic-input>
+    </ng-container>
+  <div class="button-area w-100 d-flex flex-row align-items-center justify-content-end">
+    <rollic-button [config]="this.saveButtonConfig"></rollic-button>
+  </div>
+
+  </div>
+</div>
