@@ -116,7 +116,6 @@ export class GameCreationPageComponent implements OnInit {
     this.gameCreationForm.valueChanges.subscribe((value)=>{
       this.saveButtonConfig["disabled"] = this.gameCreationForm.status != "VALID";
 
-      console.log(this.saveButtonConfig,this.gameCreationForm.status != "VALID");
     })
 
   }

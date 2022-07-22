@@ -32,13 +32,11 @@ export class RollicInputComponent implements OnInit {
   }
 
   uploadImage(event:any){
-    console.log(event.files);
     if (event.files && event.files[0] && this.config.type == InputTypes.FILE) {
       var reader = new FileReader();
 
       reader.onload = (event: ProgressEvent) => {
         let x = (<FileReader>event.target).result;
-        console.log(x);
         let obj=  { };
         obj[this.config.formConfig.imageTarget] = x;
         this.formGroup.patchValue(obj);

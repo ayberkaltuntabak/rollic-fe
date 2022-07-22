@@ -43,9 +43,7 @@ export class GameComponent implements OnInit {
   constructor(private gameListService:GameListService,private sanitizer: DomSanitizer) { }
 
   ngOnInit(): void {
-    console.log(this.config);
     this.imagePath = this.sanitizer.bypassSecurityTrustResourceUrl(this.config.image);
-    console.log(this.imagePath);
   }
 
   getValue(item:any){

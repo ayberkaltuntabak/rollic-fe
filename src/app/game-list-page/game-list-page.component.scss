@@ -12,3 +12,8 @@
   align-items: center;
   justify-content: space-between;
 }
+.content-container{
+    column-gap: 1rem;
+    row-gap: 1rem ;
+    flex-wrap: wrap;
+}
